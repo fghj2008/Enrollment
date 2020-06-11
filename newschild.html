@@ -23,6 +23,43 @@
     <hr>
     <div id="app">
         <div class="right">
+            <div id="p0" class="page" style="margin: 0 auto;">
+                <h1>99學年度入學新生來源</h1>
+                <div class='tableauPlaceholder' id='viz1591799798871'><noscript><a href='#'><img alt=' '
+                                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;99&#47;99_15916032471790&#47;1&#47;1_rss.png'
+                                style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+                        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                        <param name='embed_code_version' value='3' />
+                        <param name='site_root' value='' />
+                        <param name='name' value='99_15916032471790&#47;1' />
+                        <param name='tabs' value='no' />
+                        <param name='toolbar' value='yes' />
+                        <param name='static_image'
+                            value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;99&#47;99_15916032471790&#47;1&#47;1.png' />
+                        <param name='animate_transition' value='yes' />
+                        <param name='display_static_image' value='yes' />
+                        <param name='display_spinner' value='yes' />
+                        <param name='display_overlay' value='yes' />
+                        <param name='display_count' value='yes' /></object></div>
+            </div>
+            <div id="p1-1" class="page" style="margin: 0 auto;">
+                <h1>100學年度入學新生來源</h1>
+                <div class='tableauPlaceholder' id='viz1591799831838'><noscript><a
+                            href='#'><img alt=' '
+                                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;T3&#47;T3SZ95M5W&#47;1_rss.png'
+                                style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+                        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                        <param name='embed_code_version' value='3' />
+                        <param name='path' value='shared&#47;T3SZ95M5W' />
+                        <param name='toolbar' value='yes' />
+                        <param name='static_image'
+                            value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;T3&#47;T3SZ95M5W&#47;1.png' />
+                        <param name='animate_transition' value='yes' />
+                        <param name='display_static_image' value='yes' />
+                        <param name='display_spinner' value='yes' />
+                        <param name='display_overlay' value='yes' />
+                        <param name='display_count' value='yes' /></object></div>
+            </div>
             <div id="p1" class="page" style="margin: 0 auto;">
                 <h1>101學年度入學新生來源</h1>
                 <div class='tableauPlaceholder' id='viz1591614764208'><noscript><a href='#'><img alt=' '
@@ -182,23 +219,6 @@
         <p>Tel：886-4-26318652　Fax：886-4-26310744　E-Mail：sec@web.hk.edu.tw</p>
     </div>
     <script>
-        // var navBtn = document.getElementsByClassName('nav');
-        // var page = document.getElementsByClassName('page');
-        // var pageIdx = 0;
-        // page[0].style.display = 'block';
-        // for (var i = 0; i < navBtn.length; i++) {
-        //     navBtn[i].addEventListener('click', menuClcik);
-        // }
-        // function menuClcik() {
-        //     for (var s = 0; s < navBtn.length; s++) {
-        //         navBtn[s].classList.remove('active');
-        //         page[s].style.display = 'none';
-        //     }
-        //     this.classList.add('active');
-        //     pageIdx = Number(this.id.substr(1));
-        //     page[pageIdx - 1].style.display = 'block';
-        // }
-
         function map1() {
             var divElement = document.getElementById('viz1591614764208');
             var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '100%';
@@ -274,6 +294,26 @@
             vizElement.parentNode.insertBefore(scriptElement, vizElement);
         }
         map8();
+        function map9() {
+            var divElement = document.getElementById('viz1591799798871');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            vizElement.style.width = '100%';
+            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        }
+        map9();
+        function map10(){
+            var divElement = document.getElementById('viz1591799831838'); 
+            var vizElement = divElement.getElementsByTagName('object')[0]; 
+            vizElement.style.width = '100%'; 
+            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; 
+            var scriptElement = document.createElement('script'); 
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; 
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        }
+        map10();
     </script>
 
 
