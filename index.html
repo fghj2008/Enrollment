@@ -8,102 +8,17 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
 </head>
 <link rel="stylesheet" href="index.css">
-<style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<style>st
   * {
     font-family: "Fjalla One";
-  }
-
-  svg {
-    /* height: 100vh; */
-
-  }
-
-  .svg {
-    display: inline-block;
-    width: 40%;
-    float: left;
-  }
-
-  .clearfix:after {
-    content: "";
-    display: block;
-    clear: both;
-    height: 0;
-    visibility: hidden;
-  }
-
-  #app {
-    width: 100%;
-    background-color: rgb(114, 114, 114);
-    margin: 0 auto;
-    box-shadow: 1px 1px 3px black;
-    border-radius: 10px;
-    margin-bottom: 30px;
-  }
-
-  #app>.clearfix>h1 {
-    text-align: center;
-    color: #fff;
-    padding: 20px 0px;
-  }
-
-  path {
-    stroke: white;
-    fill: transparent;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    cursor: pointer;
-  }
-
-  path:hover {
-    fill: #B99362;
-    -webkit-transform: translate(-5px, -5px);
-    transform: translate(-5px, -5px);
-  }
-
-  .title_area {
-    color: white;
-    display: inline-block;
-    width: 50%;
-    float: right;
-  }
-
-  .ullsist {
-    width: 90%;
-    list-style: none;
-    padding: 0;
-    border: 1px solid white;
-    height: 450px;
-    border-radius: 6px;
-
-  }
-
-  .ullsist>li {
-    display: inline-block;
-    width: 24%;
-    padding: 5px 15px;
-  }
-
-  .contentalldata {
-    width: 95%;
-    height: auto;
-    margin-top: 30px;
-  }
-
-  .tth {
-    color: #fff;
-  }
-
-  .location {
-    text-align: center;
-    font-size: 36px;
   }
 </style>
 
 <body>
   <div class="heard">
     <h3>弘光科技大學</h3>
-    <h2>招生資料分析</h2>
+    <h2> <a href="home.html">招生資料分析</a></h2>
   </div>
   <hr>
   <ul class="menuul">
@@ -188,31 +103,45 @@
       </div>
       <div class="title_area clearfix">
         <div class="forcast" v-if="now_area">
-          <h3>{{now_area.entag}}</h3>
           <h2>縣市: {{now_area.place}}</h2>
-          <h4>高中:</h4>
+          <h3>{{now_area.entag}}</h3>
           <ul class="ullsist">
+            <h2>高中</h2>
+            <hr>
             <li v-for="heightscools in now_area.heightscool" class="lsist">{{heightscools}}</li>
           </ul>
         </div>
       </div>
     </div>
     <div class="contentalldata">
+      <i class="fa fa-times faxx"></i>
       <div v-if="schoolall" class="tth">
-        <h3 class="location">縣市:{{schoolall.location}}</h3>
-        <div v-for="schoolallss in schoolall.school">
-          <span>{{schoolallss.schoolheight}}</span>
-          <div v-for="scdate in schoolallss.schoolall">
-            <span>學年度:{{scdate.schoolyear}}</span>
-            <span>博覽會{{scdate.Expo}}</span>
-            <span>進班宣導{{scdate.propaganda}}</span>
-            <span>集合式{{scdate.aggregate}}</span>
-            <span>模擬面試{{scdate.mockinterview}}</span>
-            <span>到校參訪{{scdate.visit}}</span>
-            <span>年節、校慶贈禮{{scdate.gift}}</span>
-            <span>前一年入學人數{{scdate.Previousenrollment}}</span>
-            <span>後一年入學人數{{scdate.nextrollment}}</span>
-            <span>增減人數{{scdate.decrease}}</span>
+        <h3 class="location">{{schoolall.location}}</h3>
+        <div v-for="schoolallss in schoolall.school" class="schooldeta">
+          <div class="schoolallss">{{schoolallss.schoolheight}}</div>
+          <div class="scdate clearfix scdatessas">
+            <div>學年度</div>
+            <div>博覽會</div>
+            <div>進班宣導</div>
+            <div>集合式</div>
+            <div>模擬面試</div>
+            <div>到校參訪</div>
+            <div>年節、校慶贈禮</div>
+            <div>前一年入學人數</div>
+            <div>後一年入學人數</div>
+            <div>增減人數</div>
+          </div>
+          <div v-for="scdate in schoolallss.schoolall" class="scdate clearfix">
+            <div>{{scdate.schoolyear}}</div>
+            <div>{{scdate.Expo}}</div>
+            <div>{{scdate.propaganda}}</div>
+            <div>{{scdate.aggregate}}</div>
+            <div>{{scdate.mockinterview}}</div>
+            <div>{{scdate.visit}}</div>
+            <div>{{scdate.gift}}</div>
+            <div>{{scdate.Previousenrollment}}</div>
+            <div>{{scdate.nextrollment}}</div>
+            <div>{{scdate.decrease}}</div>
           </div>
         </div>
       </div>
@@ -239,6 +168,7 @@
           this.schooldata = res.data
         })
       },
+
       computed: {
         now_area: function () {
           var vobj = this;
@@ -262,7 +192,6 @@
         }
 
       },
-
     });
 
     $("path").mouseenter(function (e) {
@@ -272,7 +201,12 @@
     $("path").click(function (e) {
       var tagname = $(this).attr("data-name");
       vm.schooladd = tagname;
+      $('.contentalldata').addClass("open");
     });
+    $('.faxx').click(function(){
+      $('.contentalldata').removeClass("open");
+    })
+
 
 
 
