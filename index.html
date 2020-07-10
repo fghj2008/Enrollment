@@ -7,27 +7,22 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
 </head>
-<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="./css/index.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-<style>st
-  * {
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+  integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+  integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+<style>
+  st * {
     font-family: "Fjalla One";
   }
 </style>
 
 <body>
-  <div class="heard">
-    <h3>弘光科技大學</h3>
-    <h2> <a href="home.html">招生資料分析</a></h2>
-  </div>
-  <hr>
-  <ul class="menuul">
-    <li><a href="newschild.html">新生畢業學校(以學年度區分)</a> </li>
-    <li><a href="news.html">100-107學年度新生來源統計圖</a></li>
-    <li><a href="index.html">招生宣導方式</a></li>
-    <li><a href="coefficient.html">相關係數</a></li>
-  </ul>
-  <hr>
+  <div id="header"></div>
   <div id="app">
     <div class="clearfix">
       <h1>{{title}}</h1>
@@ -147,12 +142,11 @@
       </div>
     </div>
   </div>
-  <div class="footer">
-    <hr>
-    <p>地址：43302臺中市沙鹿區臺灣大道六段1018號　隱私權政策說明</p>
-    <p>Tel：886-4-26318652　Fax：886-4-26310744　E-Mail：sec@web.hk.edu.tw</p>
-  </div>
+  <div id="footer"></div>
 
+  <script src="./js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
   <script>
     var vm = new Vue({
       el: "#app",
@@ -203,7 +197,7 @@
       vm.schooladd = tagname;
       $('.contentalldata').addClass("open");
     });
-    $('.faxx').click(function(){
+    $('.faxx').click(function () {
       $('.contentalldata').removeClass("open");
     })
 
