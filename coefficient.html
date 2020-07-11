@@ -14,9 +14,9 @@
 
 <body>
     <div id="header"></div>
-    <div id="app">
-        <div class="right">
-            <div id="p1" class="page" style="margin: 0 auto;">
+    <div id="app" class="container-fluid">
+        <div class="row">
+            <div id="p1" class="page col-md-6" style="margin: 0 auto;">
                 <h1>博覽會</h1>
                 <div class='tableauPlaceholder' id='viz1591664408416'><noscript><a href='#'><img alt=' '
                                 src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;__&#47;__15916368812490&#47;sheet0&#47;1_rss.png'
@@ -35,7 +35,7 @@
                         <param name='display_overlay' value='yes' />
                         <param name='display_count' value='yes' /></object></div>
             </div>
-            <div id="p2" class="page" style="margin: 0 auto;">
+            <div id="p2" class="page col-md-6" style="margin: 0 auto;">
                 <h1>進班宣導</h1>
                 <div class='tableauPlaceholder' id='viz1591664447616'><noscript><a href='#'><img alt=' '
                                 src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;__&#47;__15916377912190&#47;sheet0&#47;1_rss.png'
@@ -54,7 +54,9 @@
                         <param name='display_overlay' value='yes' />
                         <param name='display_count' value='yes' /></object></div>
             </div>
-            <div id="p3" class="page" style="margin: 0 auto;">
+        </div>
+        <div class="row">
+            <div id="p3" class="page col-md-6" style="margin: 0 auto;">
                 <h1>集合式</h1>
                 <div class='tableauPlaceholder' id='viz1591664499983'><noscript><a href='#'><img alt=' '
                                 src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;__&#47;__15916383122870&#47;sheet0&#47;1_rss.png'
@@ -73,7 +75,7 @@
                         <param name='display_overlay' value='yes' />
                         <param name='display_count' value='yes' /></object></div>
             </div>
-            <div id="p4" class="page" style="margin: 0 auto;">
+            <div id="p4" class="page col-md-6" style="margin: 0 auto;">
                 <h1>模擬面試</h1>
                 <div class='tableauPlaceholder' id='viz1591664543046'><noscript><a href='#'><img alt=' '
                                 src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;__&#47;__15916376017920&#47;sheet0&#47;1_rss.png'
@@ -92,8 +94,9 @@
                         <param name='display_overlay' value='yes' />
                         <param name='display_count' value='yes' /></object></div>
             </div>
-
-            <div id="p5" class="page" style="margin: 0 auto;">
+        </div>
+        <div class="row">
+            <div id="p5" class="page col-md-6" style="margin: 0 auto;">
                 <h1>到校參訪</h1>
                 <div class='tableauPlaceholder' id='viz1591664599964'><noscript><a href='#'><img alt=' '
                                 src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;__&#47;__15916368534220&#47;sheet0&#47;1_rss.png'
@@ -113,7 +116,7 @@
                         <param name='display_count' value='yes' /></object></div>
             </div>
 
-            <div id="p6" class="page" style="margin: 0 auto;">
+            <div id="p6" class="page col-md-6" style="margin: 0 auto;">
                 <h1>年節贈禮</h1>
                 <div class='tableauPlaceholder' id='viz1591664642805'><noscript><a href='#'><img alt=' '
                                 src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;__&#47;__15916368097830&#47;sheet0&#47;1_rss.png'
@@ -135,12 +138,17 @@
             </div>
         </div>
     </div>
+    </div>
     <hr />
     <div id="footer"></div>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
     <script src="./js/main.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
     <script type='text/javascript'>
         function map1() {
             var divElement = document.getElementById('viz1591664408416');

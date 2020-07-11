@@ -24,9 +24,10 @@
 <body>
   <div id="header"></div>
   <div id="app">
+
     <div class="clearfix">
       <h1>{{title}}</h1>
-      <div class="svg ">
+      <div class="svg">
         <svg id="cf503461-00bd-459a-aeb5-062ebc913211" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 595.28 841.89">
           <defs></defs>
@@ -106,37 +107,38 @@
             <li v-for="heightscools in now_area.heightscool" class="lsist">{{heightscools}}</li>
           </ul>
         </div>
+
       </div>
-    </div>
-    <div class="contentalldata">
-      <i class="fa fa-times faxx"></i>
-      <div v-if="schoolall" class="tth">
-        <h3 class="location">{{schoolall.location}}</h3>
-        <div v-for="schoolallss in schoolall.school" class="schooldeta">
-          <div class="schoolallss">{{schoolallss.schoolheight}}</div>
-          <div class="scdate clearfix scdatessas">
-            <div>學年度</div>
-            <div>博覽會</div>
-            <div>進班宣導</div>
-            <div>集合式</div>
-            <div>模擬面試</div>
-            <div>到校參訪</div>
-            <div>年節、校慶贈禮</div>
-            <div>前一年入學人數</div>
-            <div>後一年入學人數</div>
-            <div>增減人數</div>
-          </div>
-          <div v-for="scdate in schoolallss.schoolall" class="scdate clearfix">
-            <div>{{scdate.schoolyear}}</div>
-            <div>{{scdate.Expo}}</div>
-            <div>{{scdate.propaganda}}</div>
-            <div>{{scdate.aggregate}}</div>
-            <div>{{scdate.mockinterview}}</div>
-            <div>{{scdate.visit}}</div>
-            <div>{{scdate.gift}}</div>
-            <div>{{scdate.Previousenrollment}}</div>
-            <div>{{scdate.nextrollment}}</div>
-            <div>{{scdate.decrease}}</div>
+      <div class="contentalldata">
+        <i class="fa fa-times faxx"></i>
+        <div v-if="schoolall" class="tth">
+          <h3 class="location">{{schoolall.location}}</h3>
+          <div v-for="schoolallss in schoolall.school" class="schooldeta">
+            <div class="schoolallss">{{schoolallss.schoolheight}}</div>
+            <div class="scdate clearfix scdatessas">
+              <div>學年度</div>
+              <div>博覽會</div>
+              <div>進班宣導</div>
+              <div>集合式</div>
+              <div>模擬面試</div>
+              <div>到校參訪</div>
+              <div>年節、校慶贈禮</div>
+              <div>前一年入學人數</div>
+              <div>後一年入學人數</div>
+              <div>增減人數</div>
+            </div>
+            <div v-for="scdate in schoolallss.schoolall" class="scdate clearfix">
+              <div>{{scdate.schoolyear}}</div>
+              <div>{{scdate.Expo}}</div>
+              <div>{{scdate.propaganda}}</div>
+              <div>{{scdate.aggregate}}</div>
+              <div>{{scdate.mockinterview}}</div>
+              <div>{{scdate.visit}}</div>
+              <div>{{scdate.gift}}</div>
+              <div>{{scdate.Previousenrollment}}</div>
+              <div>{{scdate.nextrollment}}</div>
+              <div>{{scdate.decrease}}</div>
+            </div>
           </div>
         </div>
       </div>
@@ -145,8 +147,12 @@
   <div id="footer"></div>
 
   <script src="./js/main.js"></script>
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+    integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+    crossorigin="anonymous"></script>
   <script>
     var vm = new Vue({
       el: "#app",
